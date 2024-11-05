@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Updated body.light-theme */
+
+body.light-theme {
+    background: linear-gradient(to right, #5a4c6a, #9d84b7, #dfc0ff);
+    color: #333 !important;
+}
+
+/* Updated body.dark-theme */
+body.dark-theme {
+    background: linear-gradient(to right, #14224a, #51659b, #83a1fb);
+    color: #f5f5f5 !important;
+}

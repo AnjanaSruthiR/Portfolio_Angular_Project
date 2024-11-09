@@ -1,0 +1,64 @@
+<div id="home" class="home-container">
+  <section class="intro" @fadeIn>
+    <div class="intro-content">
+      <img src="assets/IMG_6260.jpg" alt="Profile Image" class="intro-image" />
+      <div class="intro-text">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi there! I’m Anjana -- a curious problem solver with a knack for weaving technology and security into seamless digital experiences. With a strong foundation in Identity and Access Management, I’ve spent two years pioneering secure solutions at Accenture, making user experience and security work hand in hand. My journey has been driven by the belief that technology should empower people, not complicate their lives.
+
+          Currently, I’m advancing my skills at Northeastern University, pursuing a Master’s in Information Systems, with an eye on data privacy and security. My work has spanned everything from engineering mobile applications to fortifying web platforms and even designing IoT solutions that offer real-time insights. I love digging deep into Java, Python, and AngularJS, along with data-driven tools like MongoDB and MySQL, to create solutions that are both innovative and secure.
+          
+          Whether it’s designing a secure single sign-on experience or building an AI-powered tool to aid farmers, I’m all about solutions that make a real impact. Looking to connect? Let’s explore how technology can drive positive change together!</p>
+        
+        <!-- Social Media Links -->
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/anjana-sruthi-ranga-164148211/" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            <span class="tooltip">LinkedIn</span>
+          </a>
+          <a href="https://github.com/AnjanaSruthiR?tab=repositories" target="_blank" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            <span class="tooltip">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="contact-container">
+  <h2>Contact Me</h2>
+  
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name" [class.active]="contactForm.controls['name'].value">Name</label>
+      <input id="name" formControlName="name" type="text" placeholder=" " />
+      <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched" class="error">
+        Name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email" [class.active]="contactForm.controls['email'].value">Email</label>
+      <input id="email" formControlName="email" type="email" placeholder=" " />
+      <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched" class="error">
+        Please enter a valid email.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message" [class.active]="contactForm.controls['message'].value">Message</label>
+      <textarea id="message" formControlName="message" rows="4" placeholder=" "></textarea>
+      <div *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched" class="error">
+        Message is required.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+  </form>
+
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+</div>
+

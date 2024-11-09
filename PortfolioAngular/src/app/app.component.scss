@@ -1,0 +1,174 @@
+/* app.component.scss */
+
+/* Header Styling */
+.navbar {
+    background-color: var(--nav-background);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  
+    nav {
+      display: flex;
+      justify-content: right;
+      gap: 1.5rem;
+      padding-right: 50px;
+    }
+  
+    .nav-link {
+      color: var(--nav-text);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s, color 0.3s;
+      border-radius: 4px;
+  
+      &:hover {
+        background-color: #555;
+        color: #e6e6e6;
+      }
+    }
+  }
+  
+  /* Toggle Switch Styling */
+  .theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-left: 1.5rem;
+  
+    /* Hide the default checkbox */
+    input[type="checkbox"] {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  
+    /* The slider (toggle) */
+    .toggle-label {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--nav-background);
+      border-radius: 24px;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5px;
+  
+      /* Position icons on opposite ends */
+      .toggle-on {
+        font-size: 0.9rem;
+        color: var(--nav-text);
+        opacity: 0; /* Hide sun icon initially */
+        transition: opacity 0.3s;
+      }
+  
+      .toggle-off {
+        font-size: 0.9rem;
+        color: var(--nav-text);
+        opacity: 1; /* Show moon icon initially */
+        transition: opacity 0.3s;
+      }
+  
+      /* Position the toggle */
+      &::after {
+        content: '';
+        position: absolute;
+        left: 4px;
+        width: 16px;
+        height: 16px;
+        background-color: var(--text-color);
+        border-radius: 50%;
+        transition: transform 0.3s;
+      }
+    }
+  
+    /* Toggle switch - ON/OFF state */
+    input:checked + .toggle-label {
+      background-color: #555;
+  
+      /* Move the toggle to the right */
+      &::after {
+        transform: translateX(26px);
+      }
+  
+      /* Show sun icon and hide moon icon */
+      .toggle-on {
+        opacity: 1; /* Sun icon visible */
+      }
+      .toggle-off {
+        opacity: 0; /* Moon icon hidden */
+      }
+    }
+  }
+  
+  .contact-floating-button {
+    position: fixed;
+    bottom: 4rem;
+    left: 4rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite;
+  
+    /* Hover Effect */
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.6), 0 0 20px rgba(0, 123, 255, 0.4);
+    }
+  
+    /* Pulse Animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+      }
+    }
+  
+    /* Styling for Curved Text */
+    .text-path {
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      fill: none;
+      stroke: none;
+      text {
+        font-size: rem;
+        fill: #fff;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+    }
+  
+    /* Icon Styling */
+    .contact-icon {
+      font-size: 2rem;
+      position: absolute;
+    }
+  }
+  

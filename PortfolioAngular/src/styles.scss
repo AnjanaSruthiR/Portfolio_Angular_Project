@@ -1,0 +1,27 @@
+/* styles.scss */
+html {
+    scroll-behavior: smooth;
+  }  
+
+/* Light Theme */
+:root {
+    --background-color: #ffdedeac;
+    --text-color: #333333;
+    --nav-background: #8a7b7b;
+    --nav-text: #ffffff;
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #e6e6e6;
+    --nav-background: #c0c0c0;
+    --nav-text: #000000;
+  }
+  
+  /* Use these variables in your styles */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  

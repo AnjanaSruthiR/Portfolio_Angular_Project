@@ -1,0 +1,17 @@
+<div class="education-container">
+  <h2>My Education</h2>
+  <div class="card-stack">
+    <div *ngFor="let edu of educationList" class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>{{ edu.degree }}</h3>
+          <p class="institution">{{ edu.institution }}</p>
+          <p class="year">{{ edu.year }}</p>
+        </div>
+        <div class="flip-card-back">
+          <p class="description">{{ edu.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

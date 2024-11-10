@@ -1,37 +1,56 @@
-import { Component } from '@angular/core';
-import { trigger, style, transition, animate } from '@angular/animations';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  animations: [
-    trigger('fadeIn', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('0.6s ease-in', style({ opacity: 1 })),
-      ]),
-    ]),
-  ]
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-  contactForm: FormGroup;
-  successMessage: string = '';
+export class HomeComponent implements OnInit {
+  words = ['Developer', 'Analyst', 'Engineer', 'Creator'];
+  currentWord = '';
+  wordIndex = 0;
+  typingSpeed = 100;
+  deletingSpeed = 100;
+  isDeleting = false;
 
-  constructor(private fb: FormBuilder) {
-    this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required]
-    });
+  constructor(private renderer: Renderer2) {}
+
+  ngOnInit() {
+    this.generateStars();
+    this.typeEffect();
   }
-  onSubmit() {
-    if (this.contactForm.valid) {
-      this.successMessage = "Thank you! Your message has been sent.";
-      console.log('Form Submitted', this.contactForm.value);
-      this.contactForm.reset();
+
+  typeEffect() {
+    const current = this.words[this.wordIndex];
+    if (this.isDeleting) {
+      this.currentWord = current.substring(0, this.currentWord.length - 1);
+    } else {
+      this.currentWord = current.substring(0, this.currentWord.length + 1);
+    }
+
+    let delay = this.isDeleting ? this.deletingSpeed : this.typingSpeed;
+
+    if (!this.isDeleting && this.currentWord === current) {
+      delay = 1000;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.currentWord === '') {
+      this.isDeleting = false;
+      this.wordIndex = (this.wordIndex + 1) % this.words.length;
+      delay = 500;
+    }
+
+    setTimeout(() => this.typeEffect(), delay);
+  }
+
+  generateStars() {
+    const starCount = 100;
+    for (let i = 0; i < starCount; i++) {
+      const star = this.renderer.createElement('div');
+      this.renderer.addClass(star, 'star');
+      this.renderer.setStyle(star, 'top', `${Math.random() * 100}vh`);
+      this.renderer.setStyle(star, 'left', `${Math.random() * 100}vw`);
+      this.renderer.setStyle(star, 'animationDuration', `${Math.random() * 2 + 1}s`);
+      this.renderer.appendChild(document.body, star);
     }
   }
-  
 }

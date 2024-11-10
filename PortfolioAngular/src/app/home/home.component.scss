@@ -1,200 +1,118 @@
-.home-container {
-  text-align: center;
-  padding: 2rem;
+// Define theme gradient variables directly here
+// $dark-bg-start: #00172d;
+// $dark-bg-end: #003366;
+$light-bg-start: #3b8cd8;
+$light-bg-end: #183a63;
 
-  .intro {
-    margin-top: 5rem;
+// Background styling with flickering stars
+// body {
+//   margin: 0;
+//   overflow: hidden;
+//   height: 100vh;
+//   background: linear-gradient(120deg, $dark-bg-start, $dark-bg-end);
+// }
 
-    .intro-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5rem;
-      flex-wrap: wrap; // Wrap on smaller screens
-
-      .intro-image {
-        width: 165px;
-        height: 215px;
-        border-radius: 50%; // Circular image
-        object-fit: cover;
-      }
-
-      .intro-text {
-        text-align: left;
-
-        h1 {
-          font-size: 2.5rem;
-          color: #333;
-          margin-bottom: 1rem;
-        }
-
-        p {
-          font-size: 1.2rem;
-          color: #666;
-          max-width: 600px;
-          margin: 0 auto;
-        }
-      }
-    }
-  }
+// Star styling
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: flicker 2s infinite ease-in-out alternate;
 }
 
-.social-links {
-  margin-top: 1.5rem;
+// Flickering effect for stars
+@keyframes flicker {
+  0%, 100% { opacity: 0.5; transform: scale(1.5); }
+  50% { opacity: 1; transform: scale(3); }
+}
+
+.home-intro {
   display: flex;
-  gap: 1.5rem;
-  justify-content: left;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  height: 100vh;
+  padding: 0 20rem;
+  background: linear-gradient(23deg, $light-bg-start, #516379, #304e71, $light-bg-end);
+  position: relative;
+  overflow: hidden;
 
-  .social-icon {
-    position: relative;
+  h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .dynamic-text {
     font-size: 1.5rem;
-    color: #4d4242;
-    transition: color 0.3s ease;
+    color: #ffffff;
+    margin-top: 1.5rem;
 
-    &:hover {
-      color: #0056b3;
+    .changing-word {
+      font-weight: bold;
+      color: #feb187;
+      border-right: 2px solid #007bff;
+      animation: blinkCursor 0.7s steps(1) infinite;
+    }
+  }
+
+  .home-links {
+    display: flex;
+    gap: 3rem;
+    justify-content: left;
+    margin: 3rem 0;
+
+    a {
+      color: white;
+      padding: 0.5rem 0rem;
+      border-radius: 15px;
+      text-decoration: none;
+      transition: color 0.3s;
+      position: relative; /* Add this to make ::before relative to the link */
+
+      &:hover {
+        color: #feb187;
+      }
+
+      /* Underline effect */
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px; 
+        width: 0;
+        background-color: #feb187; 
+        transition: width 0.4s ease; 
+      }
+
+      &:hover::before {
+        width: 50%; 
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 5rem 1rem;
+
+    h1 {
+      font-size: 2.5rem;
     }
 
-    // Tooltip styling
-    .tooltip {
-      position: absolute;
-      bottom: -1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #333;
-      color: #fff;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease;
-      white-space: nowrap;
-    }
-
-    &:hover .tooltip {
-      opacity: 1;
-      visibility: visible;
+    .dynamic-text {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
   }
 }
 
-.contact-container {
-  text-align: center;
-  padding: 2rem;
-  max-width: 600px;
-  margin: 2rem auto;
-  color: #333;
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .form-group {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
-  }
-
-  label {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.75rem;
-    font-size: 1rem;
-    color: #888;
-    pointer-events: none;
-    transition: 0.3s;
-
-    &.active,
-    input:focus + &,
-    textarea:focus + & {
-      top: -0.5rem;
-      left: 0.75rem;
-      font-size: 0.75rem;
-      color: #007bff;
-    }
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    padding: 1.2rem 0.75rem 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
-
-    &:focus {
-      border-color: #007bff;
-    }
-  }
-
-  .error {
-    color: #ff4c4c;
-    font-size: 0.875rem;
-  }
-
-  button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-
-    &:hover {
-      background-color: #0056b3;
-      transform: translateY(-3px);
-    }
-
-    &:disabled {
-      background-color: #cccccc;
-      cursor: not-allowed;
-      transform: none;
-    }
-  }
-
-  button[type="button"] {
-    margin-top: 1rem;
-    background-color: #ff4c4c;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-
-    &:hover {
-      background-color: #ff6666;
-      transform: translateY(-3px);
-    }
-  }
-
-  .success-message {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #28a745;
-    animation: fadeIn 0.6s ease-in-out;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+// Cursor blink effect for the changing word
+@keyframes blinkCursor {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #007bff; }
 }

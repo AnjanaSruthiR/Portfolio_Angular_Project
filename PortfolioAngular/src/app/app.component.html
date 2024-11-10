@@ -1,6 +1,8 @@
-<header class="navbar">
+<!-- Conditionally Render Header -->
+<header *ngIf="router.url !== '/'" class="navbar">
   <nav>
     <a routerLink="/" class="nav-link">Home</a>
+    <a routerLink="/about" class="nav-link">About</a>
     <a routerLink="/education" class="nav-link">Education</a>
     <a routerLink="/experience" class="nav-link">Experience</a>
     <a routerLink="/skills" class="nav-link">Skills</a>
@@ -16,7 +18,10 @@
     </div>
   </nav>
 </header>
-<router-outlet></router-outlet>
+
+<main [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>
 
 <!-- Floating Contact Button -->
 <button class="contact-floating-button" (click)="scrollToContact()">

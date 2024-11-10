@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -10,6 +10,7 @@ import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,9 @@ import { ProjectsComponent } from './projects/projects.component';
     EducationComponent,
     ExperienceComponent,
     SkillsComponent,
-    ProjectsComponent
-  ],
+    ProjectsComponent,
+    AboutComponent
+    ],
   imports: [
     BrowserModule,
     ReactiveFormsModule, 

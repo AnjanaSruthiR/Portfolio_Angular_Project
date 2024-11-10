@@ -5,18 +5,20 @@ import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'education', component: EducationComponent},
-  { path: 'experience', component: ExperienceComponent},
-  { path: 'skills', component: SkillsComponent},
-  { path: 'projects', component: ProjectsComponent},
-
+  { path: '', component: HomeComponent, data: { animation: 'HomePage' } },
+  { path: 'about', component: AboutComponent, data: { animation: 'AboutPage' } },
+  { path: 'education', component: EducationComponent, data: { animation: 'EducationPage' } },
+  { path: 'experience', component: ExperienceComponent, data: { animation: 'ExperiencePage' } },
+  { path: 'skills', component: SkillsComponent, data: { animation: 'SkillsPage' } },
+  { path: 'projects', component: ProjectsComponent, data: { animation: 'ProjectsPage' } }
 ];
 
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

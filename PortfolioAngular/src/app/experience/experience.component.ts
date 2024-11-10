@@ -8,15 +8,21 @@ import { Component } from '@angular/core';
 export class ExperienceComponent {
   experienceList = [
     {
-      title: "Application Developer",
+      title: "Security Engineer",
       company: "Accenture",
-      dates: "2022 - Present",
+      dates: "May 23 - Jul 24",
       description: "Enhanced IAM capabilities, implemented SSO, and optimized security protocols."
     },
     {
-      title: "Software Engineer Intern",
-      company: "XYZ Corporation",
-      dates: "Summer 2021",
+      title: "Mobile Application Developer",
+      company: "Accenture",
+      dates: "Dec 22 - Apr 23",
+      description: "Worked on front-end development, improved UI/UX design, and optimized performance."
+    },
+    {
+      title: "Web Application Developer",
+      company: "Accenture",
+      dates: "Oct 22 - Dec 23",
       description: "Worked on front-end development, improved UI/UX design, and optimized performance."
     }
   ];

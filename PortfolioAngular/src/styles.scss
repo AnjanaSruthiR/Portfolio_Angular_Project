@@ -1,3 +1,6 @@
+/* Import Devicon styles */
+@import 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css';
+
 /* styles.scss */
 html {
     scroll-behavior: smooth;
@@ -5,10 +8,14 @@ html {
 
 /* Light Theme */
 :root {
-    --background-color: #b2a8a8ac;
+    --background-color: #ffffff;
     --text-color: #333333;
     --nav-background: #807373;
     --nav-text: #ffffff;
+    --contact-me-button :#121111f1;
+    --contact-me-text :#ffffffda;
+    --About-Timeline : linear-gradient(180deg, #9f9891, #131313, #605144, #94877c);
+    --About-Timeline-item : linear-gradient(210deg, #67373738, #67373760, #6c49498f, #6b5353da);
   }
   
   /* Dark Theme */
@@ -17,6 +24,10 @@ html {
     --text-color: #c2ccd7;
     --nav-background: #a1b6ce;
     --nav-text: #000000;
+    --contact-me-button :#ffffffda;
+    --contact-me-text :#080808da;
+    --About-Timeline : linear-gradient(180deg, #cbc7c7, #7da7da, #557cab, #2972c5);
+    --About-Timeline-item : linear-gradient(45deg, #5b88bd, #6292cab8, #75a5daac, #2972c5);
   }
   
   /* Use these variables in your styles */

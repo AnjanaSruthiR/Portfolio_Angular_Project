@@ -24,25 +24,46 @@ export class AboutComponent {
     {
       type: 'education',
       title: 'Master of Science in Information Systems',
-      date: '2023 - Present',
-      description: 'Currently pursuing my Master\'s degree at Northeastern University.',
+      date: 'Sep 2024 - Dec 2026',
+      description: 'Currently pursuing my Master\'s degree at Northeastern University, honing my expertise in Information Systems by blending academic rigor with hands-on projects to develop innovative solutions and prepare for real-world challenges.',
       isLeft: true
     },
     {
       type: 'experience',
-      title: 'Application Developer at Accenture',
-      date: '2020 - 2023',
-      description: 'Specialized in IAM, SSO, and mobile development for security solutions.',
+      title: 'Security Engineer at Accenture',
+      date: 'May 2023 - Jul 2024',
+      description: 'I bridged innovation and security, crafting IAM solutions that safeguarded applications while delivering a seamless, user-centric experience.',
       isLeft: false
     },
     {
-      type: 'education',
-      title: 'Bachelor of Technology in Computer Science',
-      date: '2016 - 2020',
-      description: 'Graduated with honors, focusing on software engineering and data analysis.',
+      type: 'experience',
+      title: 'Application Developer at Accenture',
+      date: 'Oct 2022 - May 2023',
+      description: 'As an Application Developer, I brought ideas to life by designing and delivering intuitive, high-performing applications, seamlessly blending functionality and user experience to exceed expectations.',
       isLeft: true
+    },
+    {
+      type: 'education',
+      title: 'Bachelor of Technology in Computer Science Engineering',
+      date: 'Jul 2018 - Jul 2022',
+      description: 'Completed my Bachelor\'s degree in Computer Science and Engineering, building a strong foundation in programming, algorithms, and system design while working on diverse projects that fostered innovation and problem-solving skills.',
+      isLeft: false
     }
     // Add more items if necessary
+  ];
+
+  skills = [
+    { name: 'Identity and Access Management (IAM)' },
+    { name: 'Mobile App Development' },
+    { name: 'Power BI' },
+    { name: 'JavaScript' },
+    { name: 'Angular' },
+    { name: 'TypeScript' },
+    { name: 'HTML'},
+    { name: 'CSS'}
+ 
+ 
+    // Add more skills if needed
   ];
 
   constructor(private fb: FormBuilder, private router: Router) {

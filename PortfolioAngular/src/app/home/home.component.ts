@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +6,8 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('starsContainer', { static: true }) starsContainer!: ElementRef;
+
   words = ['Developer', 'Analyst', 'Engineer', 'Creator'];
   currentWord = '';
   wordIndex = 0;
@@ -50,7 +52,7 @@ export class HomeComponent implements OnInit {
       this.renderer.setStyle(star, 'top', `${Math.random() * 100}vh`);
       this.renderer.setStyle(star, 'left', `${Math.random() * 100}vw`);
       this.renderer.setStyle(star, 'animationDuration', `${Math.random() * 2 + 1}s`);
-      this.renderer.appendChild(document.body, star);
+      this.renderer.appendChild(this.starsContainer.nativeElement, star);
     }
   }
 }

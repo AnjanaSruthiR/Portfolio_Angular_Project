@@ -113,8 +113,7 @@
     position: fixed;
     bottom: 4rem;
     left: 4rem;
-    background-color: #91adcab6;
-    color: #fff;
+    background-color: var(--contact-me-button);
     border: none;
     width: 100px;
     height: 100px;
@@ -134,43 +133,26 @@
       box-shadow: 0 0 10px rgba(0, 123, 255, 0.6), 0 0 20px rgba(0, 123, 255, 0.4);
     }
   
-    /* Pulse Animation */
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-      }
-      50% {
-        transform: scale(1.1);
-        box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
-      }
-      100% {
-        transform: scale(1);
-        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-      }
-    }
-  
-    /* Styling for Curved Text */
     .text-path {
       position: absolute;
       width: 90%;
       height: 90%;
-      fill: none;
+      fill: none; 
       stroke: none;
       text {
-        font-size: rem;
-        fill: #fff;
-        font-weight: bold;
+        font-size: 0.8rem;
+        fill: var(--contact-me-text); /* Use your variable for text color */
+        font-weight: bold !important;
         letter-spacing: 2px;
       }
     }
   
-    /* Icon Styling */
     .contact-icon {
-      font-size: 2rem;
+      font-size: 1.8rem; /* Adjust icon size */
       position: absolute;
     }
   }
+  
   
   main {
     position: relative;

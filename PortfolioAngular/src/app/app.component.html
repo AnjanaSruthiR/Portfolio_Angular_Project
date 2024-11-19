@@ -10,7 +10,7 @@
 
     <!-- Toggle Switch -->
     <div class="theme-toggle">
-      <input type="checkbox" id="theme-switch" (change)="toggleTheme()" [checked]="theme === 'dark'"/>
+      <input type="checkbox" id="theme-switch" (change)="toggleTheme()" [checked]="theme === 'dark'" />
       <label for="theme-switch" class="toggle-label">
         <span class="toggle-on">🌞</span>
         <span class="toggle-off">🌜</span>
@@ -26,10 +26,22 @@
 <!-- Floating Contact Button -->
 <button class="contact-floating-button" (click)="scrollToContact()">
   <svg class="text-path" viewBox="0 0 100 100">
-    <path id="circle" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"/>
+    <!-- Path for "Hire Me" -->
+    <path id="topCircle" d="M 50,50 m -40,0 a 40,40 0 1,1 80,0" />
+
+    <!-- Path for "Contact Me" -->
+    <path id="bottomCircle" d="M 50,50 m -40,3 a 40,40 0 1,0 80,0" />
+
+    <!-- "Hire Me" on Top -->
     <text>
-      <textPath href="#circle" startOffset="20%" text-anchor="middle">CONTACT ME</textPath>
+      <textPath href="#topCircle" startOffset="35%" text-anchor="middle">HIRE ME</textPath>
     </text>
+
+    <!-- "Contact Me" on Bottom -->
+    <text>
+      <textPath href="#bottomCircle" startOffset="62%" text-anchor="middle" dy="0.2em">CONTACT ME</textPath>
+    </text>
+
   </svg>
   <span class="contact-icon">📬</span>
 </button>

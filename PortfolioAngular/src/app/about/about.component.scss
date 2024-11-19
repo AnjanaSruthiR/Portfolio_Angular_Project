@@ -25,13 +25,13 @@
 
         h1 {
           font-size: 2.5rem;
-          color: #c5d1de;
+          color: var(--text-color);;
           margin-bottom: 1rem;
         }
 
         p {
           font-size: 1.2rem;
-          color: #c4c4c4;
+          color: var(--text-color);;
           max-width: 600px;
           margin: 0 auto;
         }
@@ -49,7 +49,7 @@
   .social-icon {
     position: relative;
     font-size: 1.5rem;
-    color: #a6bed9;
+    color: var(--text-color);
     transition: color 0.3s ease;
 
     &:hover {
@@ -84,7 +84,7 @@
   padding: 2rem;
   max-width: 600px;
   margin: 7rem auto;
-  color: #bce3ff;
+  color: var(--text-color);
 
   h2 {
     font-size: 2rem;
@@ -110,7 +110,7 @@
     top: 0.5rem;
     left: 0.75rem;
     font-size: 1rem;
-    color: #888;
+    color: #71767b;
     pointer-events: none;
     transition: 0.3s;
 
@@ -120,7 +120,7 @@
       top: -1.0rem;
       left: 0.75rem;
       font-size: 0.75rem;
-      color: #ffffff;
+      color: var(--text-color);
     }
   }
 
@@ -134,12 +134,12 @@
     transition: border-color 0.3s ease;
 
     &:focus {
-      border-color: #007bff;
+      border-color: var(--About-Timeline);
     }
   }
 
   .error {
-    color: #edbd70f8;
+    color: #f5a119f8;
     font-size: 0.875rem;
   }
 
@@ -204,7 +204,7 @@
     left: 50%;
     width: 3px;
     height: 100%;
-    background : linear-gradient(180deg, #cbc7c7, #7da7da, #557cab, #2972c5);
+    background : var(--About-Timeline);
     transform: translateX(-50%);
   }
 }
@@ -212,7 +212,7 @@
 .timeline-item {
   position: relative;
   width: 45%;
-  background: linear-gradient(210deg, #cbc7c7, #7da7da, #557cab, #2972c5);
+  background: var(--About-Timeline-item);
   border-radius: 8px;
   padding: 1.5rem;
   text-align: left;
@@ -235,15 +235,138 @@
     margin-left: auto;
     transform-origin: left;
   }
+
+  .timeline-date {
+    font-size: 1rem;
+    color: var(--background-color) !important;
+    background-color: var(--text-color); /* Use a highlight color */
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }  
+
+  .timeline-content {
+    h3 {
+      font-size: 1.5rem; /* Increase the title size */
+      color: var(--text-color);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem; /* Increase the description size */
+      line-height: 1.6; /* Improve readability */
+      color: var(--text-color);
+    }
+  }
 }
 
-.timeline-content h3 {
-  color: #ffffff;
-  margin-bottom: 0.5rem;
-}
 
-.timeline-date {
-  font-size: 0.9rem;
-  color: #c7d1d6;
-  margin-bottom: 0.5rem;
+.skills-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .ellipse-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-7deg);
+  }
+
+  /* Individual elliptical layers with glow effect and increased spacing */
+  .orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 123, 255, 0.3);
+    z-index: -1;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4), 0 0 5px rgba(0, 123, 255, 0.3), 0 0 5px rgba(0, 123, 255, 0.2);
+  }
+
+  /* Adjusted sizes for each elliptical layer to increase spacing */
+  .orbit-1 {
+    width: 40%;  /* Reduced to create more space between orbits */
+    height: 20%;
+    border-color: rgba(0, 123, 255, 0.3);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4), 0 0 5px rgba(0, 123, 255, 0.3), 0 0 5px rgba(0, 123, 255, 0.2);
+  }
+
+  .orbit-2 {
+    width: 60%;  /* Increased spacing */
+    height: 40%;
+    border-color: rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3), 0 0 5px rgba(0, 123, 255, 0.25), 0 0 5px rgba(0, 123, 255, 0.2);
+  }
+
+  .orbit-3 {
+    width: 80%;  /* Further increase */
+    height: 60%;
+    border-color: rgba(0, 123, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25), 0 0 5px rgba(0, 123, 255, 0.2), 0 0 5px rgba(0, 123, 255, 0.15);
+  }
+
+  .orbit-4 {
+    width: 100%;  /* Largest orbit */
+    height: 80%;
+    border-color: rgba(0, 123, 255, 0.15);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2), 0 0 5px rgba(0, 123, 255, 0.15), 0 0 5px rgba(0, 123, 255, 0.1);
+  }
+
+  /* Skill Tags Styling */
+  .skill-tag {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #007bff;
+    background-color: #f0f8ff;
+    border-radius: 20px;
+    opacity: 0;
+    animation: popUp 1s ease forwards;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+    /* Hover effect */
+    &:hover {
+      transform: scale(1.1);
+      background-color: #007bff;
+      color: #ffffff;
+    }
+
+    /* Radial Placement for Each Skill Tag */
+    &:nth-child(5) { top: 70%; left: 50%; transform: translate(-50%, -50%) rotate(180deg); } /* IAM */
+    &:nth-child(6) { top: 55%; left: 0%; transform: translate(-50%, -50%) rotate(225deg); } /* MAD */
+    &:nth-child(7) { top: 40%; left: 10%; transform: translate(-50%, -50%) rotate(270deg); } /* PBI */
+    &:nth-child(8) { top: 20%; left: 25%; transform: translate(-50%, -50%) rotate(315deg); } /* JS */
+    &:nth-child(9) { top: 10%; left: 40%; transform: translate(-50%, -50%) rotate(60deg); } /* Angular */
+    &:nth-child(10) { top: 15%; left: 60%; transform: translate(-50%, -50%) rotate(120deg); } /* TS */
+    &:nth-child(11) { top: 55%; left: 75%; transform: translate(-50%, -50%) rotate(225deg); } /* HTML */
+    &:nth-child(12) { top: 40%; left: 75%; transform: translate(-50%, -50%) rotate(270deg); } /* CSS */
+  }
+
+  /* Pop-up animation */
+  @keyframes popUp {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }

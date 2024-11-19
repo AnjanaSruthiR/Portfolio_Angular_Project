@@ -46,13 +46,16 @@
   }
 
   .flip-card-front {
-    background-color: #007bff;
+    background-color: #bbafaf;
     color: white;
+    font-size: 18px;
+    line-height: 1.5rem;
   }
 
   .flip-card-back {
     background-color: #f9f9f9;
     color: #333;
     transform: rotateY(180deg);
+    line-height: 2rem;
   }
 }

@@ -7,16 +7,29 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
   skills = [
-    { name: 'Identity and Access Management (IAM)' },
-    { name: 'Mobile App Development' },
-    { name: 'Power BI' },
-    { name: 'JavaScript' },
-    { name: 'Angular' },
-    { name: 'TypeScript' },
-    { name: 'HTML'},
-    { name: 'CSS'}
- 
- 
-    // Add more skills if needed
+    {
+      name: 'Programming Languages',
+      items: [
+        { name: 'JavaScript', icon: 'javascript-plain' },
+        { name: 'Python', icon: 'python-plain' },
+        { name: 'Java', icon: 'java-plain' }
+      ]
+    },
+    {
+      name: 'Frameworks',
+      items: [
+        { name: 'Angular', icon: 'angularjs-plain' },
+        { name: 'React', icon: 'react-original' },
+        { name: 'Node.js', icon: 'nodejs-plain' }
+      ]
+    },
+    {
+      name: 'Tools & Platforms',
+      items: [
+        { name: 'Git', icon: 'git-plain' },
+        { name: 'Docker', icon: 'docker-plain' },
+        { name: 'AWS', icon: 'amazonwebservices-plain' }
+      ]
+    }
   ];
 }

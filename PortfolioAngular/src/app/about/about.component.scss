@@ -246,6 +246,7 @@
     top: 1rem;
     right: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: -6px;
   }  
 
   .timeline-content {
@@ -259,114 +260,6 @@
       font-size: 1.1rem; /* Increase the description size */
       line-height: 1.6; /* Improve readability */
       color: var(--text-color);
-    }
-  }
-}
-
-
-.skills-container {
-  text-align: center;
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-
-
-  h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    color: #333;
-  }
-
-  .ellipse-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(-7deg);
-  }
-
-  /* Individual elliptical layers with glow effect and increased spacing */
-  .orbit {
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid rgba(0, 123, 255, 0.3);
-    z-index: -1;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4), 0 0 5px rgba(0, 123, 255, 0.3), 0 0 5px rgba(0, 123, 255, 0.2);
-  }
-
-  /* Adjusted sizes for each elliptical layer to increase spacing */
-  .orbit-1 {
-    width: 40%;  /* Reduced to create more space between orbits */
-    height: 20%;
-    border-color: rgba(0, 123, 255, 0.3);
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4), 0 0 5px rgba(0, 123, 255, 0.3), 0 0 5px rgba(0, 123, 255, 0.2);
-  }
-
-  .orbit-2 {
-    width: 60%;  /* Increased spacing */
-    height: 40%;
-    border-color: rgba(0, 123, 255, 0.25);
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3), 0 0 5px rgba(0, 123, 255, 0.25), 0 0 5px rgba(0, 123, 255, 0.2);
-  }
-
-  .orbit-3 {
-    width: 80%;  /* Further increase */
-    height: 60%;
-    border-color: rgba(0, 123, 255, 0.2);
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25), 0 0 5px rgba(0, 123, 255, 0.2), 0 0 5px rgba(0, 123, 255, 0.15);
-  }
-
-  .orbit-4 {
-    width: 100%;  /* Largest orbit */
-    height: 80%;
-    border-color: rgba(0, 123, 255, 0.15);
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2), 0 0 5px rgba(0, 123, 255, 0.15), 0 0 5px rgba(0, 123, 255, 0.1);
-  }
-
-  /* Skill Tags Styling */
-  .skill-tag {
-    position: absolute;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #007bff;
-    background-color: #f0f8ff;
-    border-radius: 20px;
-    opacity: 0;
-    animation: popUp 1s ease forwards;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-
-    /* Hover effect */
-    &:hover {
-      transform: scale(1.1);
-      background-color: #007bff;
-      color: #ffffff;
-    }
-
-    /* Radial Placement for Each Skill Tag */
-    &:nth-child(5) { top: 70%; left: 50%; transform: translate(-50%, -50%) rotate(180deg); } /* IAM */
-    &:nth-child(6) { top: 55%; left: 0%; transform: translate(-50%, -50%) rotate(225deg); } /* MAD */
-    &:nth-child(7) { top: 40%; left: 10%; transform: translate(-50%, -50%) rotate(270deg); } /* PBI */
-    &:nth-child(8) { top: 20%; left: 25%; transform: translate(-50%, -50%) rotate(315deg); } /* JS */
-    &:nth-child(9) { top: 10%; left: 40%; transform: translate(-50%, -50%) rotate(60deg); } /* Angular */
-    &:nth-child(10) { top: 15%; left: 60%; transform: translate(-50%, -50%) rotate(120deg); } /* TS */
-    &:nth-child(11) { top: 55%; left: 75%; transform: translate(-50%, -50%) rotate(225deg); } /* HTML */
-    &:nth-child(12) { top: 40%; left: 75%; transform: translate(-50%, -50%) rotate(270deg); } /* CSS */
-  }
-
-  /* Pop-up animation */
-  @keyframes popUp {
-    0% {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
     }
   }
 }

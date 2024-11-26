@@ -52,19 +52,6 @@ export class AboutComponent {
     // Add more items if necessary
   ];
 
-  skills = [
-    { name: 'Identity and Access Management (IAM)' },
-    { name: 'Mobile App Development' },
-    { name: 'Power BI' },
-    { name: 'JavaScript' },
-    { name: 'Angular' },
-    { name: 'TypeScript' },
-    { name: 'HTML'},
-    { name: 'CSS'}
- 
- 
-    // Add more skills if needed
-  ];
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.contactForm = this.fb.group({

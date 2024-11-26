@@ -1,58 +1,51 @@
 .skills-section {
-    text-align: center;
-    padding: 2rem;
-  
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      color: #333;
-    }
-  
-    .skills-grid {
+  text-align: center;
+  padding: 2rem;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem; /* Adds space between categories */
+
+    .skill-category {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-  
-      .skill-category {
-        width: 300px;
-  
-        h3 {
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
-          color: #555;
-        }
-  
-        .skill-items {
+      flex-direction: column; /* Stack category name and skills vertically */
+      align-items: flex-start;
+
+      h3 {
+        font-size: 1.5rem;
+        margin: 2.5rem; /* Adds spacing between category name and skills */
+        color: var(--Skills-H3);
+      }
+
+      .skill-items {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap; /* Wrap skills if they overflow */
+        padding-left: 25rem; /* Indents skills under the category name */
+
+        .skill-item {
           display: flex;
-          flex-wrap: wrap;
-          gap: 1rem;
-          justify-content: center;
-  
-          .skill-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 80px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-  
-            &:hover {
-              transform: scale(1.1);
-            }
-  
-            .skill-icon {
-              font-size: 50px;
-              margin-bottom: 0.5rem;
-            }            
-  
-            .skill-name {
-              font-size: 0.9rem;
-              color: #666;
-            }
+          align-items: center;
+          gap: 0.5rem;
+
+          .skill-icon {
+            font-size: 60px; /* Increased icon size */
+          }
+
+          .skill-name {
+            font-size: 1rem;
+            color: var(--text-color);
           }
         }
       }
     }
   }
-  
+}

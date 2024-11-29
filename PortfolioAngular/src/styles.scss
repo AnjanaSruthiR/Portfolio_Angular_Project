@@ -14,9 +14,10 @@ html {
     --nav-text: #ffffff;
     --contact-me-button :#121111f1;
     --contact-me-text :#ffffffda;
-    --About-Timeline : linear-gradient(180deg, #9f9891, #131313, #605144, #94877c);
-    --About-Timeline-item : linear-gradient(210deg, #67373738, #67373760, #6c49498f, #6b5353da);
+    --About-Timeline : linear-gradient(180deg, #99959200, #131313, #605144, #94877c);
+    --About-Timeline-item : linear-gradient(210deg, #6b636331, #a29b9b55, #6055554c, #514c4c82);
     --Skills-H3 : #000000;
+    --Edu-Exp-card :  linear-gradient(135deg, #fffcfcee, #a29b9bee);
   }
   
   /* Dark Theme */
@@ -30,6 +31,7 @@ html {
     --About-Timeline : linear-gradient(180deg, #cbc7c7, #7da7da, #557cab, #2972c5);
     --About-Timeline-item : linear-gradient(45deg, #5b88bd, #6292cab8, #75a5daac, #2972c5);
     --Skills-H3 : #ffffff;
+    --Edu-Exp-card :  linear-gradient(135deg, #f8f9fa, #94aac0);
   }
   
   /* Use these variables in your styles */

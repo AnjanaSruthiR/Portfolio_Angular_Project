@@ -8,7 +8,15 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 export class HomeComponent implements OnInit {
   @ViewChild('starsContainer', { static: true }) starsContainer!: ElementRef;
 
-  words = ['Developer', 'Analyst', 'Engineer', 'Creator'];
+  words = [
+    'Software Developer',
+    'Data Enthusiast',
+    'Security Analyst',
+    'Front-end Developer',
+    'UI/UX Designer',
+    'Solutions Architect'
+  ];
+
   currentWord = '';
   wordIndex = 0;
   typingSpeed = 100;

@@ -1,12 +1,12 @@
 <div class="experience-container">
-  <h2>Professional Experience</h2>
+  <h2>My Experience</h2>
   <div class="card-stack">
     <div *ngFor="let job of experienceList" class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <h3>{{ job.title }}</h3>
-          <p class="company">{{ job.company }}</p>
-          <p class="date">{{ job.dates }}</p>
+          <h4 class="company">{{ job.company }}</h4>
+          <h3 class="date">{{ job.dates }}</h3>
         </div>
         <div class="flip-card-back">
           <p class="description">{{ job.description }}</p>

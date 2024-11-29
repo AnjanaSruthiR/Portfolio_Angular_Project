@@ -39,7 +39,7 @@ export class AboutComponent {
       type: 'experience',
       title: 'Application Developer at Accenture',
       date: 'Oct 2022 - May 2023',
-      description: 'As an Application Developer, I brought ideas to life by designing and delivering intuitive, high-performing applications, seamlessly blending functionality and user experience to exceed expectations.',
+      description: 'Developed robust, user-friendly mobile applications using Kotlin and Swift for Android and iOS, delivering responsive and high-performing solutions. Optimized functionality and resolved critical issues, ensuring projects were completed on time with minimal bugs.',
       isLeft: true
     },
     {

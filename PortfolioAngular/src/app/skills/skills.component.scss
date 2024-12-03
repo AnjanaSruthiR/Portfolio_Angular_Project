@@ -33,11 +33,15 @@
 
         .skill-item {
           display: flex;
-          align-items: center;
-          gap: 0.5rem;
+          flex-direction: column; /* Stack icon and name vertically */
+          align-items: center; /* Center align icon and name */
+          gap: 1rem; /* Adds space between icon and name */
 
           .skill-icon {
-            font-size: 60px; /* Increased icon size */
+            font-size: 60px; /* Icon size */
+            width: 60px;
+            height: 60px;
+            object-fit: contain; 
           }
 
           .skill-name {

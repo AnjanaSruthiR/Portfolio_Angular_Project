@@ -7,6 +7,10 @@
           <h3>{{ job.title }}</h3>
           <h4 class="company">{{ job.company }}</h4>
           <h3 class="date">{{ job.dates }}</h3>
+          <p class="skill-title">Skills Aquired:</p>
+          <div class="skills">
+            <span *ngFor="let skill of job.skills"><b>{{ skill }}</b></span>
+          </div>
         </div>
         <div class="flip-card-back">
           <p class="description">{{ job.description }}</p>

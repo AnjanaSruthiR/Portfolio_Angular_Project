@@ -44,17 +44,17 @@ export class SkillsComponent {
       items: [
         { name: 'Figma', icon: 'figma-plain' },
         { name: 'Jira', icon: 'jira-plain' },
-        { name: 'ServiceNow (SNOW)', icon: 'servicenow-plain' },
+        { name: 'ServiceNow (SNOW)', icon: 'assets/ServiceNow.png' },
         { name: 'Docker', icon: 'docker-plain' },
-        { name: 'Power BI', icon: 'assets/icons/powerbi.svg' },
-        { name: 'NetBeans', icon: 'assets/icons/netbeans.svg' },
-        { name: 'Azure Data Studio', icon: 'assets/icons/azuredatastudio.svg' },
+        { name: 'Power BI', icon: 'assets/Power_BI.svg' },
+        { name: 'NetBeans', icon: 'assets/NetBeans.svg.png' },
+        { name: 'Azure Data Studio', icon: 'assets/azure-data-studio.png' },
         { name: 'Android Studio', icon: 'androidstudio-plain' },
-        { name: 'VS Code', icon: 'visualstudiocode-plain' },
-        { name: 'MS Excel', icon: 'msexcel-plain' },
+        { name: 'VS Code', icon: 'assets/Visual_Studio_Code.svg.webp' },
+        { name: 'MS Excel', icon: 'assets/Microsoft_Office_Excel.svg.webp' },
         { name: 'GitHub', icon: 'github-original' },
         { name: 'Bitbucket', icon: 'bitbucket-original' },
-        { name: 'O365', icon: 'microsoftoffice-plain' }
+        { name: 'O365', icon: 'assets/Microsoft_365.svg.png' }
       ]
     }
   ];

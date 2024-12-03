@@ -13,14 +13,17 @@ export class EducationComponent {
       cgpa: "3.8/4.0",
       description: [
         "Foundations of Data Analytics",
-        "Data Management for Analytics", 
+        "Data Management for Analytics",
+        "Data Visualization and BI Tools", 
+        "Database Management",
+        "Programming and Application Development",
         "Computation and Visualization"
       ]
     },
     {
       degree: "Bachelor of Technology in Computer Science & Engineering",
       institution: "Sri Venkateswara Engineering College for Women, India",
-      cgpa: "3.0/4.0",
+      cgpa: "7.89/10.0",
       description: [
         "Discrete Mathematics",
         "Principles of Programming Languages",

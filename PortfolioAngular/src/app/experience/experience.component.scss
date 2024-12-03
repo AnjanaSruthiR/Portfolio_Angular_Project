@@ -65,6 +65,26 @@
       font-size: 0.9rem;
       color: #2e2e2e;
     }
+
+    .skill-title {
+      text-align: left !important;
+      padding-top: 2rem;
+      margin-bottom: 0rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.1rem;
+
+      span {
+        color: #000000;
+        padding: 0.3rem 0.6rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
   }
 
   .flip-card-back {

@@ -22,7 +22,7 @@ html {
   
   /* Dark Theme */
   [data-theme="dark"] {
-    --background-color: #121212;
+    --background-color: #1c1c1c;
     --text-color: #c2ccd7;
     --nav-background: #a1b6ce;
     --nav-text: #000000;
@@ -31,7 +31,7 @@ html {
     --About-Timeline : linear-gradient(180deg, #cbc7c7, #7da7da, #557cab, #2972c5);
     --About-Timeline-item : linear-gradient(45deg, #5b88bd, #6292cab8, #75a5daac, #2972c5);
     --Skills-H3 : #ffffff;
-    --Edu-Exp-card :  linear-gradient(135deg, #f8f9fa, #94aac0);
+    --Edu-Exp-card : #dcdcdc;
   }
   
   /* Use these variables in your styles */

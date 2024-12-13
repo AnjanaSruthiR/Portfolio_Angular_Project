@@ -9,21 +9,24 @@ export class ProjectsComponent {
   projects = [
     {
       title: 'Portfolio Website',
-      description: 'A personal portfolio website built with Angular and SCSS.',
-      image: 'assets/images/portfolio.png',
-      technologies: ['Angular', 'SCSS', 'HTML']
+      description: 'A personal portfolio website built with AngularJS, SCSS and Typescript.',
+      image: '/assets/Projects/Portfolio_Home.png',
+      technologies: ['AngularJS', 'SCSS', 'HTML5', 'Typescript'],
+      githubLink: 'https://github.com/AnjanaSruthiR/Portfolio_Angular_Project'
     },
     {
-      title: 'E-commerce App',
-      description: 'An e-commerce application with a smooth user experience and secure checkout.',
+      title: 'Car Rental System App',
+      description: 'An Car Rental application with a smooth user experience and secure checkout integrated with real time database',
       image: 'assets/images/ecommerce.png',
-      technologies: ['React', 'CSS', 'Firebase']
+      technologies: ['React', 'CSS', 'Firebase', 'MySql'],
+      githubLink: 'https://github.com/yourusername/portfolio-website'
     },
     {
-      title: 'Social Media Dashboard',
-      description: 'A dashboard for monitoring social media analytics and performance.',
-      image: 'assets/images/social.png',
-      technologies: ['Vue', 'JavaScript', 'D3.js']
+      title: 'Contact Form',
+      description: 'A Form for contacting and connecting withpeople through my portfolio website.',
+      image: '/assets/Projects/Contact_Form.png',
+      technologies: ['Vue', 'JavaScript', 'D3.js'],
+      githubLink: 'https://github.com/yourusername/portfolio-website'
     }
   ];
 }

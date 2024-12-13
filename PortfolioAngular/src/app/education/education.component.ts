@@ -10,19 +10,17 @@ export class EducationComponent {
     {
       degree: "Master of Science in Information Systems",
       institution: "Northeastern University, Boston, MA",
+      logo: "/assets/Education /NEU.png", 
       cgpa: "3.8/4.0",
       description: [
-        "Foundations of Data Analytics",
-        "Data Management for Analytics",
-        "Data Visualization and BI Tools", 
-        "Database Management",
-        "Programming and Application Development",
-        "Computation and Visualization"
+        "Data Management and Database Design",
+        "Application Engineering and Development",
       ]
     },
     {
       degree: "Bachelor of Technology in Computer Science & Engineering",
       institution: "Sri Venkateswara Engineering College for Women, India",
+      logo: "/assets/Education /SVEW.png", 
       cgpa: "7.89/10.0",
       description: [
         "Discrete Mathematics",

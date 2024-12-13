@@ -10,30 +10,34 @@ export class ExperienceComponent {
     {
       title: "Security Engineer",
       company: "Accenture",
+      logo: "/assets/Experience/accenture-icon.png",
       dates: "May 23 - Jul 24",
-      description: "Spearheaded the enhancement of Identity and Access Management (IAM) systems by deploying Okta SSO and MFA, fortifying security protocols and streamlining user authentication. Proactively eliminated vulnerabilities, reducing support incidents by 30% while ensuring compliance with industry standards.",
-      skills : ['IAM', 'Okta', 'ServiceNow']
+      description: " Enhanced Identity and Access Management (IAM) capabilities by integrating applications using Okta, effectively reducing security vulnerabilities and ensuring compliance within the AXON project. Implemented SSO with SAML 2.0, OIDC, and MFA using Okta Verify, strengthening security protocols. Fortified security frameworks by proactively identifying vulnerabilities, implementing robust authentication protocols, and streamlining user access processes. These initiatives eradicated critical security gaps, reduced support incidents by 30\%, and ensured compliance with industry standards, delivering an unparalleled secure experience",
+      skills : ['IAM', 'Okta', 'SAML', 'OIDC', 'ServiceNow']
     },
     {
       title: "Application Developer",
       company: "Accenture",
+      logo: "/assets/Experience/accenture-icon.png",
       dates: "May 23 - Jul 24",
-      description: "Developed and launched dynamic, cross-platform applications for mobile, desktop, and tablets using HTML, CSS, and jQuery. Delivered responsive, scalable solutions ahead of deadlines, significantly improving user engagement and operational efficiency.",      
-      skills : ['Angular', 'SCSS', 'HTML']
+      description: "Conceptualized and executed dynamic applications across mobile, desktop, and tablet platforms using HTML, CSS, and jQuery. Pioneered responsive design strategies to deliver visually captivating and highly functional applications, streamlining usability across devices. Collaborating with stakeholders and leading rigorous testing phases, delivered bug-free, scalable solutions ahead of deadlines, significantly amplifying user engagement and business efficiency.",      
+      skills : ['CSS3', 'HTML5', 'Responsive Web Design', 'JQuery']
     },
     {
       title: "Mobile Application Developer",
       company: "Accenture",
+      logo: "/assets/Experience/accenture-icon.png",
       dates: "Dec 22 - Apr 23",
-      description: "Engineered high-performing Android and iOS applications, leveraging Kotlin and Swift to deliver seamless UI/UX and enhance functionality. Optimized performance and resolved complex bugs, resulting in increased app reliability and customer satisfaction.",
-      skills : ['Angular', 'SCSS', 'HTML']
+      description: "Engineered cutting-edge Android and iOS applications, leveraging Kotlin and Swift to optimize performance and introduce innovative features. Spearheaded UI/UX transformations, resolving complex bugs and elevating app functionality to exceed user expectations. These contributions boosted application reliability, enhanced customer satisfaction metrics, and consistently achieved delivery milestones ahead of schedule.",
+      skills : ['Kotlin', 'Swift', 'Android Studio', 'Xcode']
     },
     {
       title: "Web Application Developer",
       company: "Accenture",
+      logo: "/assets/Experience/accenture-icon.png",
       dates: "Oct 22 - Dec 22",
-      description: "Designed and deployed responsive, high-performance web applications using HTML, CSS, and JavaScript frameworks. Revolutionized user interfaces and optimized front-end functionality, driving a 25% increase in user engagement.",
-      skills : ['Angular', 'SCSS', 'HTML']
+      description: "Spearheaded the development and refinement of the Pizzeria application, collaborating closely with the team throughout its lifecycle. Engineered robust web solutions with ExpressJS and NodeJS, designed intuitive interfaces using HTML and CSS, and optimized database management with MongoDB.",
+      skills : ['AngularJS', 'SCSS', 'HTML5', 'Typescript', 'Nodejs', '']
     }
   ];
 }

@@ -1,19 +1,24 @@
 <div class="experience-container">
-  <h2>My Experience</h2>
-  <div class="card-stack">
-    <div *ngFor="let job of experienceList" class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h3>{{ job.title }}</h3>
-          <h4 class="company">{{ job.company }}</h4>
-          <h3 class="date">{{ job.dates }}</h3>
-          <p class="skill-title">Skills Aquired:</p>
-          <div class="skills">
-            <span *ngFor="let skill of job.skills"><b>{{ skill }}</b></span>
+  <h2>My Professional Experience</h2>
+  <div class="timeline">
+    <div *ngFor="let job of experienceList" class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="card">
+          <div class="card-header">
+            <div class="company-info">            
+              <img [src]="job.logo" alt="{{ job.company }} Logo" class="company-logo" />
+              <div class="company">{{ job.company }}</div>
+            </div>
+            <div class="job-title">{{ job.title }}</div>
+            <div class="date">{{ job.dates }}</div>
           </div>
-        </div>
-        <div class="flip-card-back">
-          <p class="description">{{ job.description }}</p>
+          <div class="card-body">
+            <p class="description">{{ job.description }}</p>
+            <div class="skills">
+              <span *ngFor="let skill of job.skills" class="skill-tag">{{ skill }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

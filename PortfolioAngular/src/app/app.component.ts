@@ -58,7 +58,7 @@ export class AppComponent {
 
   scrollToContact() {
     // Navigate to About page and scroll after a delay
-    this.router.navigate(['/about']).then(() => {
+    this.router.navigate(['/contactForm']).then(() => {
       setTimeout(() => {
         const contactSection = document.querySelector('#contact');
         if (contactSection) {

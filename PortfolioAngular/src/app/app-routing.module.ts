@@ -6,6 +6,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { animation: 'HomePage' } },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'education', component: EducationComponent, data: { animation: 'EducationPage' } },
   { path: 'experience', component: ExperienceComponent, data: { animation: 'ExperiencePage' } },
   { path: 'skills', component: SkillsComponent, data: { animation: 'SkillsPage' } },
-  { path: 'projects', component: ProjectsComponent, data: { animation: 'ProjectsPage' } }
+  { path: 'projects', component: ProjectsComponent, data: { animation: 'ProjectsPage' } },
+  { path: 'contactForm', component: ContactFormComponent, data: { animation: 'ContactFormPage' } }
 ];
 
 

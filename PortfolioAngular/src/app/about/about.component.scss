@@ -79,187 +79,54 @@
   }
 }
 
-.contact-container {
+
+.what-i-do {
   text-align: center;
-  padding: 2rem;
-  max-width: 600px;
-  margin: 7rem auto;
-  color: var(--text-color);
+  padding: 4rem 2rem;
 
   h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
   }
 
-  form {
+  .services {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
 
-  .form-group {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
-  }
+    .service-card {
+      background: #d0d0d0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      max-width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  label {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.75rem;
-    font-size: 1rem;
-    color: #71767b;
-    pointer-events: none;
-    transition: 0.3s;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
 
-    &.active,
-    input:focus + &,
-    textarea:focus + & {
-      top: -1.0rem;
-      left: 0.75rem;
-      font-size: 0.75rem;
-      color: var(--text-color);
-    }
-  }
+      i {
+        font-size: 3rem;
+        color: #4276ad;
+        margin-bottom: 1rem;
+      }
 
-  input,
-  textarea {
-    width: 100%;
-    padding: 1.2rem 0.75rem 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #000000;
+      }
 
-    &:focus {
-      border-color: var(--About-Timeline);
-    }
-  }
-
-  .error {
-    color: #f5a119f8;
-    font-size: 0.875rem;
-  }
-
-  button[type="submit"] {
-    background-color: #4276ad;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-
-    &:hover {
-      background-color: #82b6ee;
-      transform: translateY(-3px);
-    }
-
-    &:disabled {
-      background-color: #9a9a9a;
-      cursor: not-allowed;
-      transform: none;
-    }
-  }
-
-  .success-message {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #28a745;
-    animation: fadeIn 0.6s ease-in-out;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-
-.journey-text {
-  text-align: center;
-  justify-items: center;
-  font-size: 2rem;
-  margin: 5rem;
-}
-
-.timeline {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5rem;
-  text-align: center;
-  padding: 0 5rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    width: 3px;
-    height: 100%;
-    background : var(--About-Timeline);
-    transform: translateX(-50%);
-  }
-}
-
-.timeline-item {
-  position: relative;
-  width: 45%;
-  background: var(--About-Timeline-item);
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-
-  &.left {
-    align-self: flex-start;
-    margin-right: auto;
-    transform-origin: right;
-  }
-
-  &.right {
-    align-self: flex-end;
-    margin-left: auto;
-    transform-origin: left;
-  }
-
-  .timeline-date {
-    font-size: 1rem;
-    color: var(--background-color) !important;
-    background-color: var(--text-color); /* Use a highlight color */
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: -6px;
-  }  
-
-  .timeline-content {
-    h3 {
-      font-size: 1.5rem; /* Increase the title size */
-      color: var(--text-color);
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.1rem; /* Increase the description size */
-      line-height: 1.6; /* Improve readability */
-      color: var(--text-color);
+      p {
+        font-size: 1rem;
+        color: #000000;
+        line-height: 1.5;
+      }
     }
   }
 }

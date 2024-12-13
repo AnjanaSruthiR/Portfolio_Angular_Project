@@ -1,85 +1,112 @@
 .education-container {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
   text-align: center;
   padding: 5rem;
 
   h2 {
     font-size: 2.5rem;
     color: var(--text-color);
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     font-weight: bold;
     letter-spacing: 2px;
   }
 
   .education-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 3rem;
+    width: 100%; 
   }
 
   .education-card {
-    background: var(--Edu-Exp-card);
-    padding: 2rem;
+    background: #fff;
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    max-width: 350px;
+    width: 90%; 
+    max-width: 750px; 
+    min-width: 600px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    margin: 0 auto; 
 
     &:hover {
       transform: translateY(-10px);
       box-shadow: 0 10px 20px var(--nav-background);
     }
 
-    h4 {
-      font-size: 1.5rem;
-      color: #343a40;
-      margin-bottom: 0.3rem;
-      margin-top: 0.3rem;
-    }
+    .card-header {
+      background: #c5c4c4;
+      padding: 1.5rem;
+      border-radius: 25px 25px 0 0;
+      display: flex;
+      align-items: center; /* Vertically center logo and text */
 
-    .institution {
-      font-size: 1.2rem;
-      color: #232526d6;
-      margin-bottom: 0.3rem;
-      margin-top: 0.3rem;
-    }
-
-    .cgpa {
-      font-size: 1rem;
-      color: #495057;
-      margin-bottom: 0.3rem;
-      margin-top: 0.3rem;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px solid #515151;
-      margin: 0.3rem 0;
-    }
-
-    p {
-      margin-bottom: 0.3rem;
-      color: #212529;
-    }
-
-    .description {
-      font-size: 1rem;
-      color: #343a40;
-      line-height: 1.5rem;
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      margin-top: 0.5rem;
-      margin-bottom: 0.1rem;
-
-      li {
-        margin-bottom: 0.3rem;
+      .college-logo {
+        width: 140px;
+        height: 80px;
+        object-fit: contain; /* Maintain aspect ratio */
+        border-radius: 5px; /* Optional rounded edges */
+        flex-shrink: 0; /* Prevent the logo from shrinking */
       }
-    
-      b {
+
+      .header-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Vertically align text */
+        text-align: left; /* Align text to the left */
+
+        h4 {
+          font-size: 1.5rem;
+          color: #343a40;
+          margin: 0 0 0.5rem 0; /* Adjust spacing */
+        }
+
+        .institution {
+          font-size: 1.2rem;
+          color: #232526d6;
+          margin: 0 0 0.5rem 0;
+        }
+
+        .cgpa {
+          font-size: 1rem;
+          color: #495057;
+          margin: 0;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 2rem;
+      border-radius: 0 0 25px 25px;
+
+      p {
+        margin-bottom: 0.3rem;
         color: #212529;
+      }
+
+      .description {
+        font-size: 1rem;
+        color: #343a40;
+        line-height: 1.5rem;
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.1rem;
+
+        li {
+          margin-bottom: 0.3rem;
+        }
+
+        b {
+          color: #212529;
+        }
       }
     }
   }
